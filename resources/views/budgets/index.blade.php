@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
-@section('title', 'Budget')
+@section('title', 'Anggaran')
 
 @section('content')
     <div class="mb-4">
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <h2 class="fw-bold">Budget</h2>
-                <p class="text-muted">Kelola dan monitor budget per kategori</p>
+                <h2 class="fw-bold">Anggaran Kampus</h2>
+                <p class="text-muted">Kelola dan monitor anggaran keuangan kampus per kategori</p>
             </div>
             <a href="{{ route('budgets.create') }}" class="btn btn-primary">
-                <i class="bi bi-plus-circle"></i> Tambah Budget
+                <i class="bi bi-plus-circle"></i> Tambah Anggaran
             </a>
         </div>
     </div>
@@ -36,7 +36,7 @@
                                         Terpakai: Rp {{ number_format($budget->total_spent, 0, ',', '.') }}
                                     </span>
                                     <span class="fw-bold">
-                                        Budget: Rp {{ number_format($budget->amount, 0, ',', '.') }}
+                                        Anggaran: Rp {{ number_format($budget->amount, 0, ',', '.') }}
                                     </span>
                                 </div>
                                 <div class="progress" style="height: 25px;">
@@ -77,9 +77,9 @@
                 <div class="card stats-card">
                     <div class="card-body text-center py-5">
                         <i class="bi bi-piggy-bank text-muted" style="font-size: 3rem;"></i>
-                        <p class="text-muted mt-3">Belum ada budget</p>
+                        <p class="text-muted mt-3">Belum ada anggaran</p>
                         <a href="{{ route('budgets.create') }}" class="btn btn-primary">
-                            <i class="bi bi-plus-circle"></i> Tambah Budget Pertama
+                            <i class="bi bi-plus-circle"></i> Tambah Anggaran Pertama
                         </a>
                     </div>
                 </div>

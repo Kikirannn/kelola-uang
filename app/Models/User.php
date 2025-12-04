@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
+        'department',
     ];
 
     /**
@@ -44,5 +46,42 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Get role label for display
+     */
+    public function getRoleLabel(): string
+    {
+        return match ($this->role) {
+            'bendahara' => 'Bendahara Kampus',
+            'staff_keuangan' => 'Staff Keuangan',
+            'admin_fakultas' => 'Admin Fakultas',
+            default => 'Staff Keuangan',
+        };
+    }
+
+    /**
+     * Scope a query to only include bendahara users
+     */
+    public function scopeBendahara($query)
+    {
+        return $query->where('role', 'bendahara');
+    }
+
+    /**
+     * Scope a query to only include staff keuangan users
+     */
+    public function scopeStaffKeuangan($query)
+    {
+        return $query->where('role', 'staff_keuangan');
+    }
+
+    /**
+     * Scope a query to only include admin fakultas users
+     */
+    public function scopeAdminFakultas($query)
+    {
+        return $query->where('role', 'admin_fakultas');
     }
 }

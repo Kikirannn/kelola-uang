@@ -6,8 +6,8 @@
     <div class="mb-4">
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <h2 class="fw-bold">Kategori</h2>
-                <p class="text-muted">Kelola kategori transaksi</p>
+                <h2 class="fw-bold">Kategori Keuangan Kampus</h2>
+                <p class="text-muted">Kelola kategori transaksi keuangan kampus</p>
             </div>
             <a href="{{ route('categories.create') }}" class="btn btn-primary">
                 <i class="bi bi-plus-circle"></i> Tambah Kategori

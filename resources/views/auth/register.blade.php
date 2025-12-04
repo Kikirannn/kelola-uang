@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Register - Kelola Uang</title>
+    <title>Register - Sistem Keuangan IKIP Siliwangi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -30,10 +30,10 @@
 <body>
     <div class="register-card p-5">
         <div class="text-center mb-4">
-            <img src="{{ asset('images/Logo.jpg') }}" alt="Foto" class="rounded-circle border border-primary"
-                style="width: 3rem; height: 3rem; object-fit: cover;">
-            <h2 class="fw-bold mt-3">Kelola Uang</h2>
-            <p class="text-muted">Buat akun baru</p>
+            <img src="{{ asset('images/Logo.jpg') }}" alt="Logo IKIP Siliwangi"
+                class="rounded-circle border border-primary" style="width: 3rem; height: 3rem; object-fit: cover;">
+            <h2 class="fw-bold mt-3">IKIP Siliwangi</h2>
+            <p class="text-muted">Daftar Akun Staff Keuangan</p>
         </div>
 
         @if($errors->any())

@@ -4,8 +4,8 @@
 
 @section('content')
     <div class="mb-4">
-        <h2 class="fw-bold">Dashboard</h2>
-        <p class="text-muted">Selamat datang, {{ auth()->user()->name }}!</p>
+        <h2 class="fw-bold">Dashboard Keuangan Kampus</h2>
+        <p class="text-muted">Selamat datang, {{ auth()->user()->name }} ({{ auth()->user()->getRoleLabel() }})</p>
     </div>
 
     <!-- Stats Cards -->
@@ -15,7 +15,7 @@
                 <div class="card-body text-white">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="mb-1 opacity-75">Total Pemasukan</p>
+                            <p class="mb-1 opacity-75">Pemasukan Kampus</p>
                             <h3 class="fw-bold mb-0">Rp {{ number_format($totalIncome, 0, ',', '.') }}</h3>
                         </div>
                         <div class="stats-icon bg-white bg-opacity-25">
@@ -30,7 +30,7 @@
                 <div class="card-body text-white">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="mb-1 opacity-75">Total Pengeluaran</p>
+                            <p class="mb-1 opacity-75">Pengeluaran Kampus</p>
                             <h3 class="fw-bold mb-0">Rp {{ number_format($totalExpense, 0, ',', '.') }}</h3>
                         </div>
                         <div class="stats-icon bg-white bg-opacity-25">
@@ -45,7 +45,7 @@
                 <div class="card-body text-white">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <p class="mb-1 opacity-75">Saldo</p>
+                            <p class="mb-1 opacity-75">Kas Kampus</p>
                             <h3 class="fw-bold mb-0">Rp {{ number_format($balance, 0, ',', '.') }}</h3>
                         </div>
                         <div class="stats-icon bg-white bg-opacity-25">
@@ -62,7 +62,7 @@
         <div class="col-lg-8">
             <div class="card stats-card">
                 <div class="card-body">
-                    <h5 class="card-title fw-bold mb-4">Grafik Pemasukan & Pengeluaran (6 Bulan Terakhir)</h5>
+                    <h5 class="card-title fw-bold mb-4">Grafik Keuangan Kampus (6 Bulan Terakhir)</h5>
                     <canvas id="monthlyChart"></canvas>
                 </div>
             </div>
@@ -81,7 +81,7 @@
     <div class="card stats-card">
         <div class="card-body">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h5 class="card-title fw-bold mb-0">Transaksi Terakhir</h5>
+                <h5 class="card-title fw-bold mb-0">Transaksi Kampus Terakhir</h5>
                 <a href="{{ route('transactions.index') }}" class="btn btn-sm btn-primary">
                     <i class="bi bi-eye"></i> Lihat Semua
                 </a>

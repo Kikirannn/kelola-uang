@@ -6,8 +6,8 @@
     <div class="mb-4">
         <div class="d-flex justify-content-between align-items-center">
             <div>
-                <h2 class="fw-bold">Transaksi</h2>
-                <p class="text-muted">Kelola semua transaksi pemasukan dan pengeluaran</p>
+                <h2 class="fw-bold">Transaksi Keuangan Kampus</h2>
+                <p class="text-muted">Kelola semua transaksi pemasukan dan pengeluaran kampus</p>
             </div>
             <a href="{{ route('transactions.create') }}" class="btn btn-primary">
                 <i class="bi bi-plus-circle"></i> Tambah Transaksi
